@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387.67 194.22">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #ebdcd1;
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="BANNER_2" data-name="BANNER 2">
+        <path class="cls-2" d="m0,194.22s130.82-13.17,185.07-83.83C240.39,38.36,326.92-16.76,387.67,4.68v189.54H0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
