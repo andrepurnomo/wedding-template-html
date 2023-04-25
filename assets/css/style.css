@@ -55,7 +55,7 @@
   padding-top: 50px;
   padding-left: 30px;
   padding-right: 30px;
-  height: 87vh;
+  min-height: 87vh;
   border: solid 3px #967053;
   border-top-right-radius: 25vh;
   border-top-left-radius: 25vh;
