@@ -169,3 +169,50 @@
   border-radius: 30px;
   padding: 10px 20px;
 }
+
+/* SAVEDATE */
+#savedate {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 90vh;
+  border: solid 3px #967053;
+  border-top-right-radius: 25vh;
+  border-top-left-radius: 25vh;
+}
+
+#savedate > .image > .flower-top {
+  position: fixed;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  z-index: -1;
+}
+
+#savedate > .image > .flower-bottom {
+  position: fixed;
+  bottom: -100px;
+  left: -150px;
+  width: 400px;
+  z-index: -1;
+}
+
+#savedate > .image > .bg-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 30vw;
+  width: 70vw;
+  z-index: -2;
+}
+
+#main-page {
+  width: 100%;
+}
+
+#main-page .page-item {
+  width: 100%;
+  height: 100vh;
+  padding-top: 30px;
+}
