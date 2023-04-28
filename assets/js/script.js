@@ -9,6 +9,11 @@ function openWelcome() {
   });
   audio.play();
   const scrollPage = new ScrollPage("#main-page");
+
+  scrollPage.onScroll(function (e) {
+    console.log("Leaving from : " + e.currentPageName); //only fire if you keep scroll your mouse wheel
+    console.log("Scroll to : " + e.nextPageName);
+  });
 }
 
 var audio = new Audio("./assets/sound/cover.mp3");
