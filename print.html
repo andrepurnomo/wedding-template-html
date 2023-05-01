@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print</title>
+    <link rel="stylesheet" href="print.css" />
+    +
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content" onclick="printToFile(this)">
+      <div class="title">
+        <h1>Bpk Damonosasd</h1>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script>
+    //Creating dynamic link that automatically click
+    function downloadURI(uri, name) {
+      var link = document.createElement("a");
+      link.download = name;
+      link.href = uri;
+      link.click();
+      //after creating link you should delete dynamic link
+      //clearDynamicLink(link);
+    }
+
+    //Your modified code.
+    function printToFile(div) {
+      for (let i = 0; i < guests.length; i++) {
+        const guest = guests[i];
+        $(".content > .title h1").text(guest);
+
+        html2canvas(div).then((canvas) => {
+          var myImage = canvas.toDataURL("image/png");
+          downloadURI("data:" + myImage, `${guest}.png`);
+        });
+      }
+    }
+  </script>
+  <script>
+    var guests = [
+      "Guntur",
+      "Muslim",
+      "Tarjan",
+      "Bpk. Tarto",
+      "Bpk. Tholifin",
+      "Bpk. Ngatijo",
+      "Bpk. Giarto",
+      "Bpk. Tarman",
+      "Bpk. Agus",
+      "Bpk. Sapto",
+      "Bpk. Marsono",
+      "Bpk. Totok",
+      "Totok Sukardi",
+      "Wahyu Budi. P",
+      "Yudi Tulus",
+      "Siswantoro",
+      "Fatimah",
+      "Violita",
+      "Topan",
+      "Amat Zainuri",
+      "Hariyanto",
+      "Bpk. Josie",
+      "Bpk. Doni",
+      "Darmo",
+      "Subali",
+      "Shofi",
+      "Cicik",
+      "Agus",
+      "Joko",
+      "Bpk Mei Diana",
+      "Mbak Hanik",
+      "Mbak Diah Ratna (Dety)",
+      "M. Irham",
+      "Bpk. Sugeng",
+      "Suhono",
+      "Poer",
+      "Eko Mardiyanto",
+      "Lilis",
+      "Bpk. Hermanto",
+      "Pop Haryono",
+      "Bpk. Fatoni",
+      "Bpk. Totok",
+      "Yoyon",
+      "Didik",
+      "Yanto",
+      "Agus",
+      "Tanto",
+      "Rochmat",
+      "Lilik Paryono",
+      "Bpk Darmo",
+      "Susy Bahlia",
+      "Bpk Lasno",
+      "Bpk Anggar Supagal",
+      "Mbak Ajeng (Ranni)",
+      "Muji",
+      "Kunadi",
+      "Bu Giyo",
+      "Bu Pur",
+      "Bu Harsono",
+      "Bu Tri",
+      "Bu Umi",
+      "Bu Tata",
+      "Bu Eman",
+      "Bu Maryanto",
+      "Bu Bambang",
+      "Eyange",
+      "Bu Agus",
+      "Bu Agus",
+      "Bu Jumaidi",
+      "Mbak Dina",
+      "Bu Totok",
+      "Ning, S.Asih",
+      "Bu Tri, S.Asih",
+      "Bu Suwadi",
+      "Bu Irene",
+      "Mas Riyan",
+      "Mas Rari",
+      "Mas Miftah",
+      "Mas Aan",
+      "Mas Zakky",
+      "Mas Zulfa",
+      "Mas Ferdi",
+      "Mas Suryani",
+      "Mas Elno",
+      "Mbak Tutik",
+      "Bu Susi",
+      "Mas Rizky",
+      "Mba Febi",
+    ];
+  </script>
+</html>

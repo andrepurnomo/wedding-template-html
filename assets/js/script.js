@@ -1,3 +1,9 @@
+function toProperCase(txt) {
+  return txt.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
 function openWelcome() {
   //   $("#welcome").addClass("animate__animated animate__fadeOut");
   animateCSS("#welcome", "fadeOut").then((message) => {
@@ -8,12 +14,7 @@ function openWelcome() {
     console.log("do someting");
   });
   audio.play();
-  const scrollPage = new ScrollPage("#main-page");
-
-  scrollPage.onScroll(function (e) {
-    console.log("Leaving from : " + e.currentPageName); //only fire if you keep scroll your mouse wheel
-    console.log("Scroll to : " + e.nextPageName);
-  });
+  // const scrollPage = new ScrollPage("#main-page");
 }
 
 var audio = new Audio("./assets/sound/cover.mp3");
@@ -36,3 +37,26 @@ const animateCSS = (element, animation, prefix = "animate__") =>
 
     node.addEventListener("animationend", handleAnimationEnd, { once: true });
   });
+
+let gallery = $(".gallery a").simpleLightbox();
+gallery.on("show.simplelightbox", function () {
+  // do something…
+  console.log("WOWO");
+});
+gallery.on("error.simplelightbox", function (e) {
+  console.log(e); // some usefull information
+});
+
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const guest = urlParams.get("kepada");
+const guest_split = guest.split("_");
+
+var complete = [];
+for (let i = 0; i < guest_split.length; i++) {
+  const g = guest_split[i];
+  complete.push(toProperCase(g));
+}
+
+$(".action > h3").text(complete.join(" "));
